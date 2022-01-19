@@ -28,30 +28,39 @@ export const aboutData = {
 export const projectsData = [
   {
     id: nanoid(),
-    img: 'project.jpg',
-    title: '',
+    img: 'RivalPeak.png',
+    title: 'Rival Peak',
     info: '',
     info2: '',
-    url: '',
-    repo: 'https://github.com/cobidev/react-simplefolio', // if no repo, the button will not show up
+    url: 'https://www.facebook.com/gaming/play/rivalpeak',
+    repo: '', // if no repo, the button will not show up
   },
   {
     id: nanoid(),
-    img: 'project.jpg',
-    title: '',
+    img: 'SpellSlingers.jpg',
+    title: 'SpellSlingers',
     info: '',
     info2: '',
-    url: '',
-    repo: 'https://github.com/cobidev/react-simplefolio', // if no repo, the button will not show up
+    url: 'https://www.facebook.com/gaming/play/rivalpeak',
+    repo: '', // if no repo, the button will not show up
   },
   {
     id: nanoid(),
-    img: 'project.jpg',
-    title: '',
+    img: 'NiaNow.png',
+    title: 'Nia Now',
     info: '',
     info2: '',
-    url: '',
-    repo: 'https://github.com/cobidev/react-simplefolio', // if no repo, the button will not show up
+    url: 'https://nianow.com/',
+    repo: '', // if no repo, the button will not show up
+  },
+  {
+    id: nanoid(),
+    img: 'HasBird.png',
+    title: 'HasBird?',
+    info: '',
+    info2: '',
+    url: 'https://hasbird.com/',
+    repo: 'https://github.com/Dcooley1350/hasBirds', // if no repo, the button will not show up
   },
 ];
 
