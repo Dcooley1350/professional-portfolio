@@ -33,7 +33,7 @@ export const projectsData = [
     info: '',
     info2: '',
     url: 'https://www.facebook.com/gaming/play/rivalpeak',
-    repo: '', // if no repo, the button will not show up
+    repo: '',
   },
   {
     id: nanoid(),
@@ -42,25 +42,26 @@ export const projectsData = [
     info: '',
     info2: '',
     url: 'https://www.facebook.com/gaming/play/rivalpeak',
-    repo: '', // if no repo, the button will not show up
+    repo: '',
   },
   {
     id: nanoid(),
     img: 'NiaNow.png',
     title: 'Nia Now',
-    info: '',
-    info2: '',
+    info: "For the past 3 years I have had the privelidge of contracting as a front-end developer on the Nia-Now webapp. I am proud of the work I have done to help bring the Nia creative team's vision and message to fruition.",
+    info2: 'Nia Now utilizes a React front-end and a Python Django backend.',
     url: 'https://nianow.com/',
-    repo: '', // if no repo, the button will not show up
+    repo: '',
   },
   {
     id: nanoid(),
     img: 'HasBird.png',
     title: 'HasBird?',
-    info: '',
-    info2: '',
+    info: "HasBird? is of a genre I am calling 'semi-educational'. I just enjoy building goofy websites in my free time. Hopefully it will make you laugh, and you just might learn something.",
+    info2:
+      'This static site was built using Gatsby JS and was styled using Styled-Components. It is hosted in an S3 bucket and delivered though a CloudFront Distribution.',
     url: 'https://hasbird.com/',
-    repo: 'https://github.com/Dcooley1350/hasBirds', // if no repo, the button will not show up
+    repo: 'https://github.com/Dcooley1350/hasBirds',
   },
 ];
 
