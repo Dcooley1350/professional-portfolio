@@ -4,7 +4,7 @@ import { nanoid } from 'nanoid';
 export const headData = {
   title: 'Devin Cooley', // e.g: 'Name | Developer'
   lang: 'en', // e.g: en, es, fr, jp
-  description: 'Devin Cooley: Software Engineer and Web Developer', // e.g: Welcome to my website
+  description: 'Devin Cooley: Software Engineer and Web Developer',
 };
 
 // HERO DATA
@@ -12,15 +12,18 @@ export const heroData = {
   title: '',
   name: 'Devin Cooley',
   subtitle: 'Call me Devin-Ops, or Web-Devin',
-  cta: '',
+  cta: 'Scrolly Scroll',
 };
 
 // ABOUT DATA
 export const aboutData = {
   img: 'profile.jpg',
-  paragraphOne: '',
-  paragraphTwo: '',
-  paragraphThree: '',
+  paragraphOne:
+    'I love to build useful and entertaining things. That is why I started my journey to become a software engineer: to build stuff that brings positive change and happiness to our world.',
+  paragraphTwo:
+    'I became a Web Dev(in) about 3 years ago. By a stroke of chance, I was quickly offered a position as a DevOps engineer. "What the heck is a DevOps engineer?", I thought. After taking the position at Pipeworks Studios, I came to really embrace the DevOps movement.',
+  paragraphThree:
+    'I like being a DevOps engineer because I get to solve such a wide range of problems for so many different people. I also like being in the mix with new cloud infrastructure, orchestration, and development tools. In the few short years I have been a DevOps engineer I have learned to write more languages and use more tools than many developers learn in a whole career. I am truly never bored with my work.',
   resume: 'https://www.resumemaker.online/es.php', // if no resume, the button will not show up
 };
 
@@ -30,7 +33,7 @@ export const projectsData = [
     id: nanoid(),
     img: 'RivalPeak.png',
     title: 'Rival Peak',
-    info: '',
+    info: 'As DevOps engineer for Pipeworks Studios on RP, the cloud infrastructure, deployment, and development environment were my responsibility. I wrote and managed the Infrastructure as Code for the AWS and Azure cloud infrastructure. I also designed and managed a Jenkins Continuous Integration/Deployment server that built the Unity game and deployed it to AWS, as well as building and deploying the backend serverless services to Azure.',
     info2: '',
     url: 'https://www.facebook.com/gaming/play/rivalpeak',
     repo: '',
@@ -39,7 +42,7 @@ export const projectsData = [
     id: nanoid(),
     img: 'SpellSlingers.jpg',
     title: 'SpellSlingers',
-    info: '',
+    info: 'As part of the DevOps team for SpellSlingers(closed beta), I helped design, implement, and manage a microservice infrastrucure running in Kubernetes on AWS cloud infrastructure. I also assisted creating and managing the Jenkins server that built and deployed said microservices.',
     info2: '',
     url: 'https://www.facebook.com/gaming/play/rivalpeak',
     repo: '',

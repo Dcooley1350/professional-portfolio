@@ -47,6 +47,12 @@
         align-items: center;
       }
 
+      &-buttons {
+        display: flex;
+        height: 100%;
+        align-content: space-between;
+      }
+
       &-text {
         text-align: left;
 
