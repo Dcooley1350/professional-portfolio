@@ -36,7 +36,8 @@ export const projectsData = [
     info: 'The Last Mile is my second project representing Pipeworks Studios as primary devOps engineer. During Last Mile development I got a chance to expand and improve the systems I designed and implemented during Rival Peak(see below). The game infrastructure consists of Unity clients running in an AWS EKS clusters, backed by an Microsoft Azure serverless backend. My responsibilities included designing, implementing, and administering the cloud infrastructure on which the game ran. I also wrote and maintained the build/deployment tools that the dev team used to build, package, and deliver game software.',
     info2: '',
     url: 'https://gametyrant.com/news/interactive-live-event-the-walking-dead-last-mile-is-a-game-we-can-all-play',
-    repo: '',
+    repo: '', // If no repo, no 'source code' button will show
+    button: 'Learn More',
   },
   {
     id: nanoid(),
@@ -46,6 +47,7 @@ export const projectsData = [
     info2: '',
     url: 'https://www.facebook.com/gaming/play/rivalpeak',
     repo: '',
+    button: 'Learn More',
   },
   {
     id: nanoid(),
@@ -55,6 +57,7 @@ export const projectsData = [
     info2: '',
     url: 'https://www.facebook.com/gaming/play/rivalpeak',
     repo: '',
+    button: 'Learn More',
   },
   {
     id: nanoid(),
@@ -64,6 +67,7 @@ export const projectsData = [
     info2: 'Nia Now utilizes a React front-end and a Python Django backend.',
     url: 'https://nianow.com/',
     repo: '',
+    button: 'See Live',
   },
   {
     id: nanoid(),
@@ -74,6 +78,7 @@ export const projectsData = [
       'This static site was built using Gatsby JS and was styled using Styled-Components. It is hosted in an S3 bucket and delivered though a CloudFront Distribution.',
     url: 'https://hasbird.com/',
     repo: 'https://github.com/Dcooley1350/hasBirds',
+    button: 'See live',
   },
 ];
 
