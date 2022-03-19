@@ -31,6 +31,15 @@ export const aboutData = {
 export const projectsData = [
   {
     id: nanoid(),
+    img: 'LastMile.jpg',
+    title: 'TWD: Last Mile',
+    info: 'The Last Mile is my second project representing Pipeworks Studios as primary devOps engineer. During Last Mile development I got a chance to expand and improve the systems I designed and implemented during Rival Peak(see below). The game infrastructure consists of Unity clients running in an AWS EKS clusters, backed by an Microsoft Azure serverless backend. My responsibilities included designing, implementing, and administering the cloud infrastructure on which the game ran. I also wrote and maintained the build/deployment tools that the dev team used to build, package, and deliver game software.',
+    info2: '',
+    url: 'https://gametyrant.com/news/interactive-live-event-the-walking-dead-last-mile-is-a-game-we-can-all-play',
+    repo: '',
+  },
+  {
+    id: nanoid(),
     img: 'RivalPeak.png',
     title: 'Rival Peak',
     info: 'As DevOps engineer for Pipeworks Studios on RP, the cloud infrastructure, deployment, and development environment were my responsibility. I wrote and managed the Infrastructure as Code for the AWS and Azure cloud infrastructure. I also designed and managed a Jenkins Continuous Integration/Deployment server that built the Unity game and deployed it to AWS, as well as building and deploying the backend serverless services to Azure.',
@@ -73,6 +82,10 @@ export const contactData = {
   cta: '',
   btn: '',
   email: '',
+};
+
+export const contactFormData = {
+  backendUrl: 'https://public.herotofu.com/v1/5c564b30-7d8e-11ec-93f9-6712a4805a99',
 };
 
 // FOOTER DATA
