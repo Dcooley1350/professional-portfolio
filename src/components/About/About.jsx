@@ -7,7 +7,7 @@ import PortfolioContext from '../../context/context';
 
 const About = () => {
   const { about } = useContext(PortfolioContext);
-  const { img, paragraphOne, paragraphTwo, paragraphThree, resume } = about;
+  const { img, paragraphOne, paragraphTwo, paragraphThree, resume, story, qAndA } = about;
 
   const [isDesktop, setIsDesktop] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
@@ -61,16 +61,30 @@ const About = () => {
                       </a>
                     </span>
                   )}
-                  <span className="d-flex mt-3">
-                    <a className="cta-btn cta-btn--resume" href="/story">
-                      Story
-                    </a>
-                  </span>
-                  <span className="d-flex mt-3">
-                    <a className="cta-btn cta-btn--resume" href="/q-and-a">
-                      Q&A
-                    </a>
-                  </span>
+                  {story && (
+                    <span className="d-flex mt-3">
+                      <a
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="cta-btn cta-btn--resume"
+                        href={story}
+                      >
+                        Story
+                      </a>
+                    </span>
+                  )}
+                  {qAndA && (
+                    <span className="d-flex mt-3">
+                      <a
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="cta-btn cta-btn--resume"
+                        href={qAndA}
+                      >
+                        Q&A
+                      </a>
+                    </span>
+                  )}
                 </div>
               </div>
             </Fade>
