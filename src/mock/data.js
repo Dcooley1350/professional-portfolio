@@ -18,12 +18,11 @@ export const heroData = {
 // ABOUT DATA
 export const aboutData = {
   img: 'profile.jpg',
-  paragraphOne:
-    'I love to build useful and entertaining things. That is why I started my journey to become a software engineer: to build stuff that brings positive change and happiness to our world.',
+  paragraphOne: 'I love to build useful and entertaining things.',
   paragraphTwo:
-    'I became a Web Dev(in) about 3 years ago. By a stroke of chance, I was quickly offered a position as a DevOps engineer. "What the heck is a DevOps engineer?", I thought. After taking the position at Pipeworks Studios, I came to really embrace the DevOps movement.',
+    'I became a Web Dev(in) about 3 years ago. By a stroke of chance, I was quickly offered a position as a DevOps engineer. "What the heck is a DevOps engineer?", I thought. After accepting the position at Pipeworks Studios, I came to embrace the DevOps movement.',
   paragraphThree:
-    'I like being a DevOps engineer because I get to solve such a wide range of problems for so many different people. I also like being in the mix with new cloud infrastructure, orchestration, and development tools. In the few short years I have been a DevOps engineer I have learned to write more languages and use more tools than many developers learn in a whole career. I am truly never bored with my work.',
+    'I like being a DevOps engineer because I get to solve such a wide range of problems for so many different people. I also like being in the mix with new cloud infrastructure, orchestration, and development tools. In the few short years I have been a DevOps engineer I have learned to write more languages and use more tools than many developers learn in a whole career. I am truly never bored with my work. Every day brings some new, interesting challenge.',
   resume: 'https://www.resumemaker.online/es.php', // if no resume, the button will not show up
 };
 
