@@ -1,4 +1,5 @@
 import React, { useContext, useState, useEffect } from 'react';
+import { useStaticQuery, graphql } from 'gatsby';
 import Fade from 'react-reveal/Fade';
 import { Container, Row, Col } from 'react-bootstrap';
 import Title from '../Title/Title';
@@ -6,8 +7,18 @@ import AboutImg from '../Image/AboutImg';
 import PortfolioContext from '../../context/context';
 
 const About = () => {
+  const resume = useStaticQuery(graphql`
+    {
+      pdf: file(name: { eq: "DevinCooleyResume" }) {
+        name
+        extension
+        publicURL
+      }
+    }
+  `);
+
   const { about } = useContext(PortfolioContext);
-  const { img, paragraphOne, paragraphTwo, paragraphThree, resume, story, qAndA } = about;
+  const { img, paragraphOne, paragraphTwo, paragraphThree, story, qAndA } = about;
 
   const [isDesktop, setIsDesktop] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
@@ -55,7 +66,7 @@ const About = () => {
                         target="_blank"
                         rel="noopener noreferrer"
                         className="cta-btn cta-btn--resume"
-                        href={resume}
+                        href={resume.pdf.publicURL}
                       >
                         Resume
                       </a>
