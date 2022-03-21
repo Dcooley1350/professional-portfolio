@@ -21,5 +21,5 @@ provider "aws" {
 
 provider "aws" {
   alias  = "acm_provider"
-  region = "us-west-2"
+  region = "us-east-1"
 }
