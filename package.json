@@ -1,7 +1,7 @@
 {
-  "name": "gatsby-starter-hello-world",
+  "name": "devin-cooley-portfolio",
   "private": true,
-  "description": "A simplified bare-bones starter for Gatsby",
+  "description": "Portfolio site for Devin Cooley.",
   "version": "0.1.0",
   "license": "MIT",
   "scripts": {
