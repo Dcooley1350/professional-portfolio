@@ -22,7 +22,7 @@ export const aboutData = {
   paragraphTwo:
     'I became a Web Dev(in) about 3 years ago. By a stroke of chance, I was quickly offered a position as a DevOps engineer. "What the heck is a DevOps engineer?", I thought. After accepting the position at Pipeworks Studios, I came to embrace the DevOps movement.',
   paragraphThree:
-    'I like being a DevOps engineer because I get to solve such a wide range of problems for so many different people. I also like being in the mix with new cloud infrastructure, orchestration, and development tools. In the few short years I have been a DevOps engineer I have learned to write more languages and use more tools than many developers learn in a whole career. I am truly never bored with my work. Every day brings some new, interesting challenge.',
+    'I like being a DevOps engineer because I get to solve such a wide range of problems for so many different people. I also enjoy being in the mix with new cloud infrastructure, orchestration, and development tools. I am truly never bored with my work. Every day brings some new, interesting challenge.',
   resume: '', // if no resume, the button will not show up
   story: '', // if no story, the button will not show up
   qAndA: '', // if no qAndA, the button will not show up

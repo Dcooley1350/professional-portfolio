@@ -27,7 +27,6 @@ const ContactForm = () => {
   }, []);
 
   const handleSubmit = (e) => {
-    console.log(validationErrors);
     setValidationErrors([]);
     e.preventDefault();
 
@@ -80,7 +79,7 @@ const ContactForm = () => {
                 <div className="mb-3 pt-0">
                   <input
                     type="email"
-                    placeholder="Your Email"
+                    placeholder="Your email"
                     name="email"
                     onChange={(e) => {
                       setEmail(e.target.value);
