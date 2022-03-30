@@ -9,7 +9,7 @@ export const headData = {
 
 // HERO DATA
 export const heroData = {
-  title: '',
+  title: 'Hi, my name is ',
   name: 'Devin Cooley',
   subtitle: 'Call me Devin-Ops, or Web-Devin',
   cta: 'Scrolly Scroll',
@@ -23,7 +23,6 @@ export const aboutData = {
     'I became a Web Dev(in) about 3 years ago. By a stroke of chance, I was quickly offered a position as a DevOps engineer. "What the heck is a DevOps engineer?", I thought. After accepting the position at Pipeworks Studios, I came to embrace the DevOps movement.',
   paragraphThree:
     'I like being a DevOps engineer because I get to solve such a wide range of problems for so many different people. Being in DevOps gives me the opportunity to assist every department during the development cycle. I also enjoy being in the mix with new cloud infrastructure, orchestration, and development tools. I am truly never bored with my work. Every day brings some new, interesting challenge.',
-  resume: '', // if no resume, the button will not show up
   story: '', // if no story, the button will not show up
   qAndA: '', // if no qAndA, the button will not show up
 };
