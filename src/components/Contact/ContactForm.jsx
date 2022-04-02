@@ -11,6 +11,7 @@ const ContactForm = () => {
   const [isDesktop, setIsDesktop] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
   const [status, setStatus] = useState('');
+  const [isLoading, setIsLoading] = useState(false);
   const [email, setEmail] = useState('');
   const [name, setName] = useState('');
   const [message, setMessage] = useState('');
@@ -36,6 +37,7 @@ const ContactForm = () => {
       setValidationErrors(errorList);
       return;
     }
+    setIsLoading(true);
 
     fetch(backendUrl, {
       method: 'POST',
@@ -50,8 +52,12 @@ const ContactForm = () => {
           throw new Error();
         }
         setStatus('success');
+        setIsLoading(false);
       })
-      .catch(() => setStatus('error'));
+      .catch(() => {
+        setStatus('error');
+        setIsLoading(false);
+      });
   };
 
   return (
@@ -100,22 +106,32 @@ const ContactForm = () => {
                   />
                 </div>
                 <div className="mb-3 pt-0">
-                  <span
-                    className="cta-btn cta-btn--sendmessage"
-                    onClick={handleSubmit}
-                    onKeyPress={handleSubmit}
-                    role="button"
-                    tabIndex={0}
-                  >
-                    Send a message
-                  </span>
+                  {isLoading === false ? (
+                    <span
+                      className="cta-btn cta-btn--sendmessage"
+                      onClick={handleSubmit}
+                      onKeyPress={handleSubmit}
+                      role="button"
+                      tabIndex={0}
+                    >
+                      Send a message
+                    </span>
+                  ) : (
+                    <div
+                      className="spinner-border"
+                      style={{ width: '3rem', height: '3rem' }}
+                      role="status"
+                    >
+                      <span className="sr-only">Loading...</span>
+                    </div>
+                  )}
                 </div>
               </form>
             </Fade>
             {validationErrors.length > 0 && (
               <div className="contact-form-errors">
                 {validationErrors.map((error) => (
-                  <p>- {error}</p>
+                  <p key={error}>- {error}</p>
                 ))}
               </div>
             )}
