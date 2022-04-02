@@ -33,7 +33,7 @@ export const projectsData = [
     id: nanoid(),
     img: 'LastMile.jpg',
     title: 'TWD: Last Mile',
-    info: 'The Last Mile is my second project representing Pipeworks Studios as primary devOps engineer. During Last Mile development I got a chance to expand and improve the systems I designed and implemented during Rival Peak(see below). The game infrastructure consists of Unity clients running in an AWS EKS clusters, backed by an Microsoft Azure serverless backend. My responsibilities included designing, implementing, and administering the cloud infrastructure on which the game ran. I also wrote and maintained the build/deployment tools that the dev team used to build, package, and deliver game software.',
+    info: 'The Last Mile is my second project representing Pipeworks Studios as primary devOps engineer. During Last Mile development I got a chance to expand and improve the systems I designed and implemented during Rival Peak(see below). The game infrastructure consists of Unity clients running in AWS EKS clusters, backed by a Microsoft Azure serverless back-end. My responsibilities included designing, implementing, and administering the cloud infrastructure on which the game ran. I also wrote and maintained the build/deployment tools that the dev team used to build, package, and deliver game software.',
     info2: '',
     url: 'https://www.gfinityesports.com/gaming-news/the-walking-dead-last-mile-announced/',
     repo: '', // If no repo, no 'source code' button will show
