@@ -1,10 +1,10 @@
 import React, { useContext, useState, useEffect } from 'react';
-import Fade from 'react-reveal/Fade';
 import { Container } from 'react-bootstrap';
+import Fade from '../Animation/Fade';
 import validateData from './ValidateFormData';
 import PortfolioContext from '../../context/context';
 
-const ContactForm = () => {
+function ContactForm() {
   const { contactForm } = useContext(PortfolioContext);
   const { backendUrl } = contactForm;
 
@@ -174,6 +174,6 @@ const ContactForm = () => {
       </Container>
     </section>
   );
-};
+}
 
 export default ContactForm;

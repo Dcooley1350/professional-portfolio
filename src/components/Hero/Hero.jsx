@@ -1,10 +1,10 @@
 import React, { useContext, useState, useEffect } from 'react';
 import { Container } from 'react-bootstrap';
-import Fade from 'react-reveal/Fade';
 import { Link } from 'react-scroll';
+import Fade from '../Animation/Fade';
 import PortfolioContext from '../../context/context';
 
-const Header = () => {
+function Header() {
   const { hero } = useContext(PortfolioContext);
   const { title, name, subtitle, cta } = hero;
 
@@ -44,6 +44,6 @@ const Header = () => {
       </Container>
     </section>
   );
-};
+}
 
 export default Header;

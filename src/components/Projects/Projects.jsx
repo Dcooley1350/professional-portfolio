@@ -1,12 +1,12 @@
 import React, { useContext, useEffect, useState } from 'react';
-import Fade from 'react-reveal/Fade';
-import Tilt from 'react-tilt';
+import Tilt from 'react-parallax-tilt';
 import { Container, Row, Col } from 'react-bootstrap';
+import Fade from '../Animation/Fade';
 import PortfolioContext from '../../context/context';
 import Title from '../Title/Title';
 import ProjectImg from '../Image/ProjectImg';
 
-const Projects = () => {
+function Projects() {
   const { projects } = useContext(PortfolioContext);
 
   const [isDesktop, setIsDesktop] = useState(false);
@@ -87,19 +87,16 @@ const Projects = () => {
                         rel="noopener noreferrer"
                       >
                         <Tilt
-                          options={{
-                            reverse: false,
-                            max: 8,
-                            perspective: 1000,
-                            scale: 1,
-                            speed: 300,
-                            transition: true,
-                            axis: null,
-                            reset: true,
-                            easing: 'cubic-bezier(.03,.98,.52,.99)',
-                          }}
+                          tiltMaxAngleX={8}
+                          tiltMaxAngleY={8}
+                          perspective={1000}
+                          scale={1}
+                          transitionSpeed={300}
+                          gyroscope={false}
+                          reset
+                          easing="cubic-bezier(.03,.98,.52,.99)"
                         >
-                          <div data-tilt className="thumbnail rounded">
+                          <div className="thumbnail rounded">
                             <ProjectImg alt={title} filename={img} />
                           </div>
                         </Tilt>
@@ -114,6 +111,6 @@ const Projects = () => {
       </Container>
     </section>
   );
-};
+}
 
 export default Projects;

@@ -1,10 +1,16 @@
+const sass = require('sass');
+const path = require('path');
+
 module.exports = {
+  siteMetadata: {
+    title: `Devin Cooley Portfolio`,
+    description: `Portfolio site for Devin Cooley`,
+    author: `@devincooley`,
+  },
   plugins: [
-    `gatsby-plugin-sass`,
-    `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-image`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
-    `gatsby-plugin-offline`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -26,6 +32,16 @@ module.exports = {
         path: `${__dirname}/src/files/`,
       },
     },
+    {
+      resolve: `gatsby-plugin-sass`,
+      options: {
+        implementation: sass,
+        sassOptions: {
+          includePaths: [path.join(__dirname, 'src/style')],
+        },
+      },
+    },
+    `gatsby-plugin-offline`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {

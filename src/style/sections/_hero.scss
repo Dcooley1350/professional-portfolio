@@ -1,13 +1,17 @@
+@use 'sass:color';
+@use '../abstracts/variables' as vars;
+@use '../abstracts/mixins' as mix;
+
 #hero {
   min-height: 100vh;
   height: 100vh;
   display: flex;
   align-items: center;
   border-bottom: 0px;
-  background: $white-color;
+  background: vars.$white-color;
   font-weight: 400;
-  color: $dark-blue-text;
-  padding: 0rem 5.6rem;
+  color: vars.$dark-blue-text;
+  padding: 0rem vars.$default-font-size;
   margin-bottom: 0;
   top: 0;
   left: 0;
@@ -21,8 +25,8 @@
   background-position: center;
   background-size: cover; */
 
-  @include respond(phone) {
-    padding: 0rem $default-font-size;
+  @include mix.respond(phone) {
+    padding: 0rem vars.$default-font-size;
   }
 
   .hero-title {
@@ -31,18 +35,18 @@
     margin-bottom: 3.2rem;
     text-align: left;
 
-    @include respond(tab-land) {
+    @include mix.respond(tab-land) {
       font-size: 4rem;
     }
-    @include respond(tab-port) {
+    @include mix.respond(tab-port) {
       font-size: 3.6rem;
       text-align: center;
     }
-    @include respond(phone) {
+    @include mix.respond(phone) {
       font-size: 3.5rem;
       line-height: 1.5;
     }
-    @include respond(phone-xs) {
+    @include mix.respond(phone-xs) {
       font-size: 2.8rem;
     }
   }
@@ -50,14 +54,14 @@
   .hero-cta {
     display: flex;
 
-    @include respond(tab-port) {
+    @include mix.respond(tab-port) {
       justify-content: center;
     }
 
     & a {
       font-size: 2.4rem;
 
-      @include respond(phone) {
+      @include mix.respond(phone) {
         font-size: 2rem;
       }
     }
