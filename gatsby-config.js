@@ -1,11 +1,18 @@
 const sass = require('sass');
 const path = require('path');
 
+/**
+ * @type {import('gatsby').GatsbyConfig}
+ */
 module.exports = {
   siteMetadata: {
     title: `Devin Cooley Portfolio`,
     description: `Portfolio site for Devin Cooley`,
     author: `@devincooley`,
+    siteUrl: `https://devincooley.com`,
+  },
+  flags: {
+    PARTIAL_HYDRATION: true,
   },
   plugins: [
     `gatsby-plugin-image`,
