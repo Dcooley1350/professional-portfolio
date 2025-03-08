@@ -1,3 +1,5 @@
+'use client';
+
 import React, { useContext, useState, useEffect } from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import { Container, Row, Col } from 'react-bootstrap';

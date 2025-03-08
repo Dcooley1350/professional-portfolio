@@ -1,3 +1,5 @@
+// TODO: There's a deprecation warning for Sass's legacy JS API that will be removed in Dart Sass 2.0.0
+// We'll need to update to the new API in the future: https://sass-lang.com/d/legacy-js-api
 const sass = require('sass');
 const path = require('path');
 
@@ -11,9 +13,7 @@ module.exports = {
     author: `@devincooley`,
     siteUrl: `https://devincooley.com`,
   },
-  flags: {
-    PARTIAL_HYDRATION: true,
-  },
+  flags: {},
   plugins: [
     `gatsby-plugin-image`,
     `gatsby-transformer-sharp`,
@@ -48,7 +48,6 @@ module.exports = {
         },
       },
     },
-    `gatsby-plugin-offline`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -61,5 +60,7 @@ module.exports = {
         icon: 'src/images/favicon.png',
       },
     },
+    // Let's try re-enabling the offline plugin
+    `gatsby-plugin-offline`,
   ],
 };

@@ -1,3 +1,5 @@
+'use client';
+
 import React from 'react';
 import QandA from '../components/QandA';
 import { headData } from '../mock/data';

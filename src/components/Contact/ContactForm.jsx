@@ -1,3 +1,5 @@
+'use client';
+
 import React, { useContext, useState, useEffect } from 'react';
 import { Container } from 'react-bootstrap';
 import Fade from '../Animation/Fade';

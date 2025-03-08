@@ -1,3 +1,5 @@
+'use client';
+
 import React, { useContext, useEffect, useState } from 'react';
 import Tilt from 'react-parallax-tilt';
 import { Container, Row, Col } from 'react-bootstrap';

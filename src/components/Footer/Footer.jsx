@@ -1,10 +1,12 @@
+'use client';
+
 import React, { useContext } from 'react';
 import PropTypes from 'prop-types';
 import { Container } from 'react-bootstrap';
 import { Link } from 'react-scroll';
 import PortfolioContext from '../../context/context';
 
-const Footer = ({ showScrollTop = true }) => {
+function Footer({ showScrollTop = true }) {
   const { footer } = useContext(PortfolioContext);
   const { networks } = footer;
   return (
@@ -39,7 +41,7 @@ const Footer = ({ showScrollTop = true }) => {
       </Container>
     </footer>
   );
-};
+}
 
 Footer.propTypes = {
   showScrollTop: PropTypes.bool,
