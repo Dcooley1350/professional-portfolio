@@ -10,17 +10,41 @@ function Header() {
   const { hero } = useContext(PortfolioContext);
   const { title, name, subtitle, cta } = hero;
 
-  const [isDesktop, setIsDesktop] = useState(false);
-  const [isMobile, setIsMobile] = useState(false);
+  // Initialize state with correct values based on window width
+  // Use a function to calculate the initial state
+  const [isDesktop, setIsDesktop] = useState(() => {
+    // Check if window is defined (for SSR)
+    if (typeof window !== 'undefined') {
+      return window.innerWidth > 769;
+    }
+    return false;
+  });
+
+  const [isMobile, setIsMobile] = useState(() => {
+    // Check if window is defined (for SSR)
+    if (typeof window !== 'undefined') {
+      return window.innerWidth <= 769;
+    }
+    return false;
+  });
 
   useEffect(() => {
-    if (window.innerWidth > 769) {
-      setIsDesktop(true);
-      setIsMobile(false);
-    } else {
-      setIsMobile(true);
-      setIsDesktop(false);
-    }
+    // This effect now just handles window resize events
+    const handleResize = () => {
+      if (window.innerWidth > 769) {
+        setIsDesktop(true);
+        setIsMobile(false);
+      } else {
+        setIsMobile(true);
+        setIsDesktop(false);
+      }
+    };
+
+    // Add event listener for window resize
+    window.addEventListener('resize', handleResize);
+
+    // Clean up
+    return () => window.removeEventListener('resize', handleResize);
   }, []);
 
   return (
