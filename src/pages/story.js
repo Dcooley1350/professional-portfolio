@@ -1,22 +1,26 @@
+'use client';
+
 import React from 'react';
-import { Helmet } from 'react-helmet';
 import Story from '../components/Story';
 import { headData } from '../mock/data';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../style/main.scss';
 
-export default () => {
+export function Head() {
   const { title, lang, description } = headData;
 
   return (
     <>
-      <Helmet>
-        <meta charSet="utf-8" />
-        <title>{title || 'Devin Cooley Portfolio: Q-and-A'}</title>
-        <html lang={lang || 'en'} />
-        <meta name="description" content={description || 'Devin Cooley Portfolio: Q-and-A'} />
-      </Helmet>
-      <Story />
+      <meta charSet="utf-8" />
+      <title>{title || 'Devin Cooley Portfolio: Story'}</title>
+      <html lang={lang || 'en'} />
+      <meta name="description" content={description || 'Devin Cooley Portfolio: Story'} />
     </>
   );
-};
+}
+
+function StoryPage() {
+  return <Story />;
+}
+
+export default StoryPage;

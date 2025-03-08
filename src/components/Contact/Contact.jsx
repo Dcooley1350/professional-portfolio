@@ -1,10 +1,12 @@
+'use client';
+
 import React, { useContext } from 'react';
-import Fade from 'react-reveal/Fade';
 import { Container } from 'react-bootstrap';
+import Fade from '../Animation/Fade';
 import PortfolioContext from '../../context/context';
 import Title from '../Title/Title';
 
-const Contact = () => {
+function Contact() {
   const { contact } = useContext(PortfolioContext);
   const { cta, btn } = contact;
 
@@ -25,6 +27,6 @@ const Contact = () => {
       </Container>
     </section>
   );
-};
+}
 
 export default Contact;

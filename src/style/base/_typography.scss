@@ -1,3 +1,5 @@
+@use '../abstracts/variables' as vars;
+@use '../abstracts/mixins' as mix;
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap');
 
 h1 {
@@ -7,7 +9,7 @@ h1 {
 p,
 a {
   font-family: 'Montserrat', sans-serif;
-  font-size: $default-font-size;
+  font-size: vars.$default-font-size;
 }
 
 a,
@@ -25,28 +27,28 @@ a:hover {
 .section-title {
   margin: 0px;
   margin-bottom: 4.5rem;
-  font-size: $big-font-size;
+  font-size: vars.$big-font-size;
   font-weight: bold;
   text-transform: uppercase;
 
-  @include respond(phone) {
+  @include mix.respond(phone) {
     font-size: 2.8rem;
   }
 }
 
 .dark-blue-text {
-  color: $dark-blue-text !important;
+  color: vars.$dark-blue-text !important;
 }
 
 .text-color-main {
-  background-image: linear-gradient(135deg, $primary-color 0%, $secondary-color 100%);
+  background-image: linear-gradient(135deg, vars.$primary-color 0%, vars.$secondary-color 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 
   // Responsive text purple style
-  @include respond(phone) {
+  @include mix.respond(phone) {
     background-image: none;
-    -webkit-text-fill-color: $secondary-color;
+    -webkit-text-fill-color: vars.$secondary-color;
   }
 
   &:hover {

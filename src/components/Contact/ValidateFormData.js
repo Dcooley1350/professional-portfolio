@@ -12,12 +12,6 @@ const validateData = ({ name, email, message }) => {
   }
 
   // Validate Email
-  if (email.length < 1) {
-    errorList.push('Email is required');
-  }
-  if (email.length > 100) {
-    errorList.push('Max email length is 100');
-  }
   if (!validator.isEmail(email)) {
     errorList.push('A valid email address is required');
   }

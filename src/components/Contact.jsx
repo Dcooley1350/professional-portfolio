@@ -1,3 +1,5 @@
+'use client';
+
 import React, { useState, useEffect } from 'react';
 import Footer from './Footer/Footer';
 import ContactForm from './Contact/ContactForm';
