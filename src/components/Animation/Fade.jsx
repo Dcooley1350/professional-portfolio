@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import PropTypes from 'prop-types';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence, useInView } from 'framer-motion';
 
 /**
  * A drop-in replacement for react-reveal/Fade using framer-motion
  * Supports the same API as react-reveal/Fade: left, right, top, bottom, delay, duration, distance
+ * Elements will only animate when they come into view while scrolling
  */
 function Fade({
   children,
@@ -17,6 +18,15 @@ function Fade({
   distance = '30px',
   ...props
 }) {
+  // Create a ref for the element
+  const ref = useRef(null);
+
+  // Monitor when the element is in view
+  const isInView = useInView(ref, {
+    once: true, // Only trigger the animation once
+    amount: 0.2, // When at least 20% of the element is visible
+  });
+
   // Determine the initial position based on the direction props
   const initial = { opacity: 0 };
 
@@ -27,11 +37,13 @@ function Fade({
   else if (bottom) initial.y = distance;
 
   // Configure the animation
-  const animate = {
-    opacity: 1,
-    x: 0,
-    y: 0,
-  };
+  const animate = isInView
+    ? {
+        opacity: 1,
+        x: 0,
+        y: 0,
+      }
+    : initial;
 
   // Configure transition options
   const transition = {
@@ -43,6 +55,7 @@ function Fade({
   return (
     <AnimatePresence>
       <motion.div
+        ref={ref}
         initial={initial}
         animate={animate}
         exit={{ opacity: 0 }}
