@@ -70,7 +70,7 @@ function About() {
                         className="cta-btn cta-btn--resume"
                         href={resume.pdf.publicURL}
                       >
-                        Resume
+                        View my resume
                       </a>
                     </span>
                   )}
